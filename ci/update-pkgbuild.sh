@@ -1,6 +1,6 @@
 #!/bin/bash -exu
 
-apt-get update && apt-get install git
+apt-get update && apt-get install -y git
 
 root_dir=$PWD
 
