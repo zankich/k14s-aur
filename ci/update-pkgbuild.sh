@@ -18,7 +18,7 @@ pushd "k14s-aur-git/"
   status="$(git status --porcelain)"
   if [[ -n "$status" ]]; then
     git config user.name "ci bot"
-    git config user.email "bot@example.com"
+    git config user.email "azankich+pezu3vxe66-bot@pivotal.io"
 
     git add --all .
     git commit -m "update tools"

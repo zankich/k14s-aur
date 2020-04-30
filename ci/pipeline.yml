@@ -48,5 +48,5 @@ jobs:
         file: k14s-aur-git/ci/update-pkgbuild.yml
       - put: k14s-aur-git
         params:
-        repository: updated-k14s-aur-git
-        rebase: true
+          repository: updated-k14s-aur-git
+          rebase: true
