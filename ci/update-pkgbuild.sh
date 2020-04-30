@@ -9,8 +9,8 @@ do
   pushd "${tool}-release"
     sha=($(sha256sum ${tool}-linux-amd64))
     version=$(cat version)
-    sed -i "3s/.*/pkgver=${version}/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
-    sed -i "10s/.*/sha256sums=(\"${sha}\")/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
+    sed -i "4s/.*/pkgver=${version}/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
+    sed -i "11s/.*/sha256sums=(\"${sha}\")/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
   popd
 done
 

@@ -1,3 +1,4 @@
+# Maintainer: Adrian Zankich <azankich@pivotal.io>
 pkgname=ytt-bin
 pkgdesc="ytt is a templating tool that understands YAML structure allowing you to focus on your data instead of how to properly escape it"
 pkgver=0.27.1
