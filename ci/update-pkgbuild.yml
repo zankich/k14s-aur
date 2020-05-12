@@ -1,0 +1,21 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: archlinux
+
+inputs:
+- name: k14s-aur-git
+- name: ytt-release
+- name: kbld-release
+- name: kapp-release
+- name: vendir-release
+
+outputs:
+- name: updated-k14s-aur-git
+
+run:
+  path: k14s-aur-git/ci/update-pkgbuild.sh
+

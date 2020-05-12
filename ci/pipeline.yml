@@ -1,0 +1,52 @@
+---
+resources:
+- name: ytt-release
+  type: github-release
+  source:
+    owner: k14s
+    repository: ytt
+
+- name: kbld-release
+  type: github-release
+  source:
+    owner: k14s
+    repository: kbld
+
+- name: kapp-release
+  type: github-release
+  source:
+    owner: k14s
+    repository: kapp
+
+- name: vendir-release
+  type: github-release
+  source:
+    owner: k14s
+    repository: vendir
+
+- name: k14s-aur-git
+  type: git
+  source:
+    uri: git@github.com:zankich/k14s-aur.git
+    branch: master
+    private_key: ((k14s-aur-git-writer-key))
+
+jobs:
+  - name: update-pkgbuild
+    public: true
+    plan:
+      - get: ytt-release
+        trigger: true
+      - get: kbld-release
+        trigger: true
+      - get: kapp-release
+        trigger: true
+      - get: vendir-release
+        trigger: true
+      - get: k14s-aur-git
+      - task: update-pkgbuild
+        file: k14s-aur-git/ci/update-pkgbuild.yml
+      - put: k14s-aur-git
+        params:
+          repository: updated-k14s-aur-git
+          rebase: true
