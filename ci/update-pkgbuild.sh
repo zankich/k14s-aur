@@ -1,16 +1,23 @@
 #!/bin/bash -exu
 
-apt-get update && apt-get install -y git
+pacman -Sy --noconfirm git
+
+useradd -m notroot
+su notroot
 
 root_dir=$PWD
 
 for tool in "kapp" "ytt" "vendir" "kbld"
 do
-  pushd "${tool}-release"
+  pushd "${root_dir}/${tool}-release"
     sha=($(sha256sum ${tool}-linux-amd64))
     version=$(cat version)
     sed -i "s/pkgver=.*/pkgver=${version}/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
     sed -i "s/sha256sums=.*/sha256sums=(\"${sha}\")/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
+  popd
+
+  pushd "${root_dir}/k14s-aur-git/${tool}-bin"
+    makepkg --printsrcinfo > .SRCINFO
   popd
 done
 
