@@ -1,9 +1,10 @@
 #!/bin/bash -exu
 
-pacman -Sy --noconfirm git
+pacman -Sy --noconfirm git base-devel
 
 useradd -m notroot
-su notroot
+
+chmod -R 777 k14s-aur-git/*
 
 root_dir=$PWD
 
@@ -17,7 +18,7 @@ do
   popd
 
   pushd "${root_dir}/k14s-aur-git/${tool}-bin"
-    makepkg --printsrcinfo > .SRCINFO
+    su -c "makepkg --printsrcinfo > .SRCINFO" -m "notroot"
   popd
 done
 
