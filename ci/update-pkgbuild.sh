@@ -4,7 +4,7 @@ pacman -Sy --noconfirm git base-devel
 
 useradd -m notroot
 
-chmod -R 777 k14s-aur-git/*
+chown -R notroot k14s-aur-git/*
 
 root_dir=$PWD
 
