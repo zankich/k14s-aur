@@ -14,6 +14,7 @@ do
     sha=($(sha256sum ${tool}-linux-amd64))
     version=$(cat version)
     sed -i "s/pkgver=.*/pkgver=${version}/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
+    sed -i "s/pkgrel=.*/pkgrel=1" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
     sed -i "s/sha256sums=.*/sha256sums=(\"${sha}\")/" "${root_dir}/k14s-aur-git/${tool}-bin/PKGBUILD"
   popd
 
