@@ -40,4 +40,4 @@ do
 done
 
 shopt -s dotglob
-cp -R "k14s-aur-git/." "updated-k14s-aur-git/"
+cp -R "${root_dir}/k14s-aur-git/." "${root_dir}/updated-k14s-aur-git/"
