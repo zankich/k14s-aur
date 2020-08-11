@@ -1,8 +1,8 @@
 # Maintainer: Adrian Zankich <azankich@pivotal.io>
 pkgname=vendir-bin
 pkgdesc="Easy way to vendor portions of git repos, github releases, etc. declaratively "
-pkgver=0.8.0
-pkgrel=2
+pkgver=0.9.0
+pkgrel=1
 url="https://github.com/k14s/vendir"
 arch=('x86_64')
 license=('apache')
@@ -11,7 +11,7 @@ provides=('vendir')
 conflicts=('vendir')
 _binary=vendir-linux-amd64
 source=("${_binary}-v${pkgver}::https://github.com/k14s/vendir/releases/download/v${pkgver}/${_binary}")
-sha256sums=("6a9afd04835020b0901c19991f138e293be99d755a5db15bed8b4dfe34920c17")
+sha256sums=("5d45cac346fad415150b82c3bf60110525a907d8545ac4c1d972d4f85985b16e")
 
 package() {
   install -Dm 755 "${srcdir}/${_binary}-v${pkgver}" "${pkgdir}/usr/bin/vendir"
