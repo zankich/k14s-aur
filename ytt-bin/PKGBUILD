@@ -1,7 +1,7 @@
 # Maintainer: Adrian Zankich <azankich@pivotal.io>
 pkgname=ytt-bin
 pkgdesc="ytt is a templating tool that understands YAML structure allowing you to focus on your data instead of how to properly escape it"
-pkgver=0.30.0
+pkgver=0.31.0
 pkgrel=1
 url="https://get-ytt.io/"
 arch=('x86_64')
@@ -11,7 +11,7 @@ provides=('ytt')
 conflicts=('ytt')
 _binary=ytt-linux-amd64
 source=("${_binary}-v${pkgver}::https://github.com/k14s/ytt/releases/download/v${pkgver}/${_binary}")
-sha256sums=("456e58c70aef5cd4946d29ed106c2b2acbb4d0d5e99129e526ecb4a859a36145")
+sha256sums=("32e7cdc38202b49fe673442bd22cb2b130e13f0f05ce724222a06522d7618395")
 
 package() {
   install -Dm 755 "${srcdir}/${_binary}-v${pkgver}" "${pkgdir}/usr/bin/ytt"
