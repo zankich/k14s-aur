@@ -1,6 +1,6 @@
 pkgbase = ytt-bin
 	pkgdesc = ytt is a templating tool that understands YAML structure allowing you to focus on your data instead of how to properly escape it
-	pkgver = 0.40.0
+	pkgver = 0.40.1
 	pkgrel = 1
 	url = https://get-ytt.io/
 	arch = x86_64
@@ -8,7 +8,7 @@ pkgbase = ytt-bin
 	license = apache
 	provides = ytt
 	conflicts = ytt
-	source = ytt-linux-amd64-v0.40.0::https://github.com/k14s/ytt/releases/download/v0.40.0/ytt-linux-amd64
-	sha256sums = 1f3d6cc66dd86b3f47ae6a062fea380f5e7e498887698948130203181c276b42
+	source = ytt-linux-amd64-v0.40.1::https://github.com/k14s/ytt/releases/download/v0.40.1/ytt-linux-amd64
+	sha256sums = 11222665c627b8f0a1443534a3dde3c9b3aac08b322d28e91f0e011e3aeb7df5
 
 pkgname = ytt-bin
