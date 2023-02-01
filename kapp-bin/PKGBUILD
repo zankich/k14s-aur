@@ -1,7 +1,7 @@
 # Maintainer: Adrian Zankich <azankich@pivotal.io>
 pkgname=kapp-bin
 pkgdesc="kapp is a simple deployment tool focused on the concept of 'Kubernetes application' — a set of resources with the same label"
-pkgver=0.54.2
+pkgver=0.54.3
 pkgrel=1
 url="https://get-kapp.io/"
 arch=('x86_64')
@@ -11,7 +11,7 @@ provides=('kapp')
 conflicts=('kapp')
 _binary=kapp-linux-amd64
 source=("${_binary}-v${pkgver}::https://github.com/k14s/kapp/releases/download/v${pkgver}/${_binary}")
-sha256sums=("bb586f4ee94a8fdeea5b3fcb934b95b20bb0d502deab19e9a445a573b6a27071")
+sha256sums=("6b53e0d866fb3cdcb781475c23973eab6c37959e53c22094bc81f998884d74ae")
 
 package() {
   install -Dm 755 "${srcdir}/${_binary}-v${pkgver}" "${pkgdir}/usr/bin/kapp"
