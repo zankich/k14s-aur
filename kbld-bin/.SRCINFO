@@ -1,6 +1,6 @@
 pkgbase = kbld-bin
 	pkgdesc = kbld seamlessly incorporates image building and image pushing into your development and deployment workflows
-	pkgver = 0.36.7
+	pkgver = 0.37.1
 	pkgrel = 1
 	url = https://get-kbld.io/
 	arch = x86_64
@@ -8,7 +8,7 @@ pkgbase = kbld-bin
 	license = apache
 	provides = kbld
 	conflicts = kbld
-	source = kbld-linux-amd64-v0.36.7::https://github.com/k14s/kbld/releases/download/v0.36.7/kbld-linux-amd64
-	sha256sums = 4df765c3f5f079bbd4cd507c1e452e58ae2ed3376ad5cc6ab62d4830b4a79143
+	source = kbld-linux-amd64-v0.37.1::https://github.com/k14s/kbld/releases/download/v0.37.1/kbld-linux-amd64
+	sha256sums = f32fb1251fcbb70d192542105044c5291c6e67fbca7fb467bf0d38d92b9bf204
 
 pkgname = kbld-bin
