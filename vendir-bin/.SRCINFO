@@ -1,6 +1,6 @@
 pkgbase = vendir-bin
 	pkgdesc = Easy way to vendor portions of git repos, github releases, etc. declaratively
-	pkgver = 0.34.8
+	pkgver = 0.35.2
 	pkgrel = 1
 	url = https://github.com/k14s/vendir
 	arch = x86_64
@@ -8,7 +8,7 @@ pkgbase = vendir-bin
 	license = apache
 	provides = vendir
 	conflicts = vendir
-	source = vendir-linux-amd64-v0.34.8::https://github.com/k14s/vendir/releases/download/v0.34.8/vendir-linux-amd64
-	sha256sums = ec952f962f64618a84456ea5be977ecdb6d8c81edcf730f16131b13f462d6e17
+	source = vendir-linux-amd64-v0.35.2::https://github.com/k14s/vendir/releases/download/v0.35.2/vendir-linux-amd64
+	sha256sums = a0f28b86a4ef3800aaa54ad30bad449fd43a6af192a081748c67f2f48ad5cbd3
 
 pkgname = vendir-bin
